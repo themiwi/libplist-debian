@@ -1,0 +1,2 @@
+# The hardening flags are set, this is a false positive
+libplist-utils: hardening-no-fortify-functions usr/bin/plistutil

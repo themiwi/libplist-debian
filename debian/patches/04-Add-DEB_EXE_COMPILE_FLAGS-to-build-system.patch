@@ -1,0 +1,29 @@
+From: Michael Wild <themiwi@users.sourceforge.net>
+Date: Mon, 29 Apr 2013 10:39:20 +0200
+Subject: Add DEB_EXE_COMPILE_FLAGS to build system
+
+This is to allow for the PIE flags being used on the executables.
+
+Signed-off-by: Michael Wild <themiwi@users.sourceforge.net>
+---
+ plistutil/CMakeLists.txt |    4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/plistutil/CMakeLists.txt b/plistutil/CMakeLists.txt
+index 68382ee..2988c70 100644
+--- a/plistutil/CMakeLists.txt
++++ b/plistutil/CMakeLists.txt
+@@ -5,5 +5,13 @@ SET(plistutil_SRC
+ ADD_EXECUTABLE(plistutil ${plistutil_SRC})
+ TARGET_LINK_LIBRARIES(plistutil plist)
+ SET_TARGET_PROPERTIES( plistutil PROPERTIES VERSION ${PLISTUTIL_VERSION} )
++IF(DEB_EXE_COMPILE_FLAGS)
++	SET_TARGET_PROPERTIES(plistutil PROPERTIES COMPILE_FLAGS
++		"${DEB_EXE_COMPILE_FLAGS}")
++ENDIF()
++IF(DEB_EXE_LINK_FLAGS)
++	SET_TARGET_PROPERTIES(plistutil PROPERTIES LINK_FLAGS
++		"${DEB_EXE_LINK_FLAGS}")
++ENDIF()
+ 
+ INSTALL( TARGETS plistutil RUNTIME DESTINATION bin COMPONENT plistutil )

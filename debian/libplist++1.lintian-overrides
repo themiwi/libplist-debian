@@ -1,0 +1,2 @@
+# The hardening flags are set, this is a false positive
+libplist++1: hardening-no-fortify-functions usr/lib/libplist++.so.1.1.10
