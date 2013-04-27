@@ -1,3 +1,14 @@
+libplist (1.10-1) experimental; urgency=low
+
+  * [8e1c6b4] New upstream version 1.10
+  * [d7690ae] Adjust for renamed plutil (now plistutil).
+  * [1af6238] Install new include/plist/{Uid,Key}.h
+  * [05f2056] Use hardening flags
+  * [5bc34e6] Update debian/libplist1.symbols
+  * [f69caed] Add build-dep on dpkg-dev
+
+ -- Michael Wild <themiwi@users.sourceforge.net>  Mon, 29 Apr 2013 11:59:01 +0200
+
 libplist (1.8-2) experimental; urgency=low
 
   * debian/control:
