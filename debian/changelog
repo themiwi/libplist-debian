@@ -1,3 +1,12 @@
+libplist (1.6-2) unstable; urgency=medium
+
+  * debian/README.Debian :
+   - Add to mention supported archs.
+  * debian/rules:
+   - Only run the test suit on supported archs. (Closes: #633457).
+
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Sat, 23 Jul 2011 14:48:59 +0200
+
 libplist (1.6-1) unstable; urgency=low
 
   * New upstream release.
