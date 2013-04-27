@@ -1,3 +1,15 @@
+libplist (1.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules:
+   - Run tests on all arches. 
+  * debian/README.Debian:
+   - Remove, since tests suit runs on all arches.
+  * debian/copyright:
+   - Fix DEP5 format.
+
+ -- Julien Lavergne <julien.lavergne@gmail.com>  Mon, 10 Oct 2011 00:06:15 +0200
+
 libplist (1.6-2) unstable; urgency=medium
 
   * debian/README.Debian :
